@@ -1,0 +1,19 @@
+.heading {
+    display: inline;
+}
+
+.right {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 15px;
+}
+
+.date {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.content {
+    text-align: justify;
+}
