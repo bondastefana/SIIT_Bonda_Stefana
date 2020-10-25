@@ -2,6 +2,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 .content {
     display: flex;
     justify-content: space-around;
@@ -68,7 +72,7 @@ header {
     justify-content: center;
     background-color: orange;
     padding: 10px;
-    margin: -10px -10px 0 -10px;
+    /* margin: -10px -10px 0 -10px; */
 }
 
 .home-page {
