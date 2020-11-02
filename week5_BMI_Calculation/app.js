@@ -28,15 +28,18 @@ function getBMIStatus(bmi) {
     }
 }
 
-var firstCustomerBMI = BMI(firstCustomer.weight, firstCustomer.height)
-var secondCustomerBMI = BMI(secondCustomer.weight, secondCustomer.height)
+firstCustomer.BMI = BMI(firstCustomer.weight, firstCustomer.height);
+firstCustomer.BMIStatus = getBMIStatus(firstCustomer.BMI);
 
-var firstCustomerResult = firstCustomer.name + ' | ' + firstCustomer.gender + ' | ' + 'BMI: ' + BMI(firstCustomer.weight, firstCustomer.height) + ' | ' + getBMIStatus(firstCustomerBMI);
-var secondCustomerResult = secondCustomer.name + ' | ' + secondCustomer.gender + ' | ' + 'BMI: ' + BMI(secondCustomer.weight, secondCustomer.height) + ' | ' + getBMIStatus(secondCustomerBMI); 
+secondCustomer.BMI = BMI(secondCustomer.weight, secondCustomer.height);
+secondCustomer.BMIStatus = getBMIStatus(secondCustomer.BMI);
 
-console.log(firstCustomerResult);
-console.log(secondCustomerResult);
+function printResult(customer) {
+    return customer.name + ' | ' + customer.gender + ' | ' + 'BMI: ' + BMI(customer.weight, customer.height) + ' | ' + getBMIStatus(customer.BMI);
+}
 
+console.log(printResult(firstCustomer));
+console.log(printResult(secondCustomer));
 
 
 
