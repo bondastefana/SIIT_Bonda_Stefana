@@ -1,0 +1,9 @@
+.table-header {
+  border: 2px solid green;
+  margin: 10px 0;
+}
+
+.table-head {
+  margin-top: 10px;
+  font-size: 25px;
+}

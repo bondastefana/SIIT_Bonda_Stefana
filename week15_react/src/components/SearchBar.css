@@ -1,0 +1,12 @@
+.search-container {
+  border: 2px solid blue;
+  padding: 10px 0;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.checkbox {
+  margin-right: 5px;
+}

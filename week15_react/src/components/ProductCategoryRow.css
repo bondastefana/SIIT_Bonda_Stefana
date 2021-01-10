@@ -1,0 +1,10 @@
+.product-container {
+  border: 2px solid pink;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.product-name {
+  padding: 5px 10px;
+  margin: 0;
+}
