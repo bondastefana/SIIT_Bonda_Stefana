@@ -15,6 +15,7 @@ import Container from 'react-bootstrap/Container';
 const App = () => {
 	// Setting initial state to 'false' (not clicked) for the 1st render.
 	const [isClicked, setIsClicked] = useState(false);
+	const [searchedItem, setSearchedItem] = useState('');
 
 	/* Setting state to 'true' when it's 'false' and vice-versa (by click event from <SearchBar /> component) => triggers
 	re-render of the whole <App /> component with the new value after the state is being set by 'setIsClicked(!isClicked)'. */
@@ -23,15 +24,19 @@ const App = () => {
 		setIsClicked(!isClicked);
 	};
 
+	const handleSearch = (event) => {
+		setSearchedItem(event.target.value);
+	};
+
 	const displayCategoryNames = () => {
 		return categoryNames.map((category, index) => {
-			return <ProductCategoryRow key={index} name={category} isClicked={isClicked} />;
+			return <ProductCategoryRow key={index} name={category} isClicked={isClicked} searchedItem={searchedItem} />;
 		});
 	};
 
 	return (
 		<Container>
-			<SearchBar hideOutOfStock={handleClick} />
+			<SearchBar hideOutOfStock={handleClick} filterItems={handleSearch} />
 			<ProductTable />
 			{displayCategoryNames()}
 		</Container>
